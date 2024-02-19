@@ -1,2 +1,9 @@
 @use "./partials/mixins";
 @use "./partials/variables";
+
+:root {
+  --green: #13be13;
+  --blue: #060f19;
+  --white: #ffffff;
+  --light-blue: #182028;
+}

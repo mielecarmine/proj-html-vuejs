@@ -1,14 +1,26 @@
 <script>
+import AppHeader from "./components/AppHeader.vue";
+
 export default {
   data() {
-    return {};
+    return {
+      header_links: [
+        "Home",
+        "Celebrity",
+        "Movie",
+        "Page",
+        "Shop",
+        "Blog",
+        "Contact us",
+      ],
+    };
   },
+
+  components: { AppHeader },
 };
 </script>
 
-<template>
-  <div class="container"></div>
-</template>
+<template></template>
 
 <style lang="scss">
 @use "./styles/general.scss";
