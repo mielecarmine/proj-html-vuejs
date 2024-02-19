@@ -12,11 +12,32 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 /* import specific icons */
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { faStar as faStarReg } from "@fortawesome/free-regular-svg-icons";
+import {
+  faStar,
+  faLock,
+  faBasketShopping,
+} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import {
+  faFacebook,
+  faTwitter,
+  faLinkedin,
+  faInstagram,
+  faGooglePlusG,
+} from "@fortawesome/free-brands-svg-icons";
 
 /* add icons to the library */
-library.add(faStar, faStarReg);
+library.add(
+  faStar,
+  faEnvelope,
+  faFacebook,
+  faTwitter,
+  faLinkedin,
+  faInstagram,
+  faGooglePlusG,
+  faLock,
+  faBasketShopping
+);
 
 const app = createApp(App);
 app.mount("#app");
