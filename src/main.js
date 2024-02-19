@@ -19,5 +19,5 @@ import { faStar as faStarReg } from "@fortawesome/free-regular-svg-icons";
 library.add(faStar, faStarReg);
 
 const app = createApp(App);
-App.mount("#app");
+app.mount("#app");
 app.component("font-awesome-icon", FontAwesomeIcon);

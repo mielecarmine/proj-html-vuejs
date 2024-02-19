@@ -20,7 +20,9 @@ export default {
 };
 </script>
 
-<template></template>
+<template>
+  <app-header :links="header_links" />
+</template>
 
 <style lang="scss">
 @use "./styles/general.scss";
