@@ -73,17 +73,11 @@ export default {
 
 #header {
   height: 200px;
-  background-color: var(--blue);
-  color: white;
 
   div {
     display: flex;
     justify-content: space-around;
     align-items: center;
-  }
-
-  .special {
-    color: var(--green);
   }
 
   .icon {

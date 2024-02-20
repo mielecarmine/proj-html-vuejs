@@ -8,9 +8,30 @@
   --light-blue: #182028;
 }
 
+#app {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.button {
+  padding: 0.7rem;
+  border-radius: 50px;
+  border: none;
+  color: var(--white);
+  &:hover {
+    background-color: var(--white);
+    color: #333;
+    font-weight: bold;
+  }
+}
+
+.special {
+  color: var(--green);
 }
 
 .text-white {
