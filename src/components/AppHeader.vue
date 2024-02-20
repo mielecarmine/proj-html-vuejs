@@ -5,7 +5,7 @@ export default {
   },
 
   props: {
-    links: Array,
+    links: Object,
   },
 
   created() {
@@ -32,7 +32,7 @@ export default {
       </div>
       <div class="d-flex gap-1">
         <font-awesome-icon class="icon" icon="fa-solid fa-lock" />
-        <span>Login</span>
+        <a href=""><span>Login</span></a>
       </div>
     </div>
 
@@ -58,10 +58,13 @@ export default {
     <div id="nav">
       <div class="menu">
         <ul class="list-group list-group-horizontal gap-1">
-          <li v-for="link in this.links" class="list-item">{{ link }}</li>
+          <!-- <li v-for="link in this.links" class="list-item">{{ link }}</li> -->
         </ul>
       </div>
-      <font-awesome-icon icon="fa-solid fa-basket-shopping" />
+      <div class="basket">
+        <font-awesome-icon icon="fa-solid fa-basket-shopping" />
+        <div class="bg-green">0</div>
+      </div>
     </div>
   </div>
 </template>
@@ -93,6 +96,18 @@ export default {
   padding: 5px;
   text-decoration: none;
   font-weight: bold;
+}
+
+.basket {
+  position: relative;
+  div {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
 }
 
 #login {
