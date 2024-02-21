@@ -188,64 +188,56 @@ export default {
           poster: "blog5-150x150.jpg",
         },
       ],
-      footer_links: [
+      footer_movies: [
         {
-          title: "Movie Category",
-          links: [
-            {
-              text: "English New Movie",
-              url: "#",
-            },
-            {
-              text: "Hindi All Movie",
-              url: "#",
-            },
-            {
-              text: "Latest Tamil Movie",
-              url: "#",
-            },
-            {
-              text: "New Top Rating Movie",
-              url: "#",
-            },
-            {
-              text: "Hornn New Movie",
-              url: "#",
-            },
-            {
-              text: "Animation New Movie",
-              url: "#",
-            },
-          ],
+          text: "English New Movie",
+          url: "#",
         },
         {
-          title: "Information",
-          links: [
-            {
-              text: "Youtube Video Post",
-              url: "#",
-            },
-            {
-              text: "Actor Information",
-              url: "#",
-            },
-            {
-              text: "New Promotion",
-              url: "#",
-            },
-            {
-              text: "Latest Movie In English",
-              url: "#",
-            },
-            {
-              text: "Latest Flim Product",
-              url: "#",
-            },
-            {
-              text: "Video New Video",
-              url: "#",
-            },
-          ],
+          text: "Hindi All Movie",
+          url: "#",
+        },
+        {
+          text: "Latest Tamil Movie",
+          url: "#",
+        },
+        {
+          text: "New Top Rating Movie",
+          url: "#",
+        },
+        {
+          text: "Hornn New Movie",
+          url: "#",
+        },
+        {
+          text: "Animation New Movie",
+          url: "#",
+        },
+      ],
+      footer_informations: [
+        {
+          text: "Youtube Video Post",
+          url: "#",
+        },
+        {
+          text: "Actor Information",
+          url: "#",
+        },
+        {
+          text: "New Promotion",
+          url: "#",
+        },
+        {
+          text: "Latest Movie In English",
+          url: "#",
+        },
+        {
+          text: "Latest Flim Product",
+          url: "#",
+        },
+        {
+          text: "Video New Video",
+          url: "#",
         },
       ],
       footer_posts: [
@@ -278,7 +270,11 @@ export default {
   </div>
   <app-header :links="header_links" />
   <app-main :links="menu_links" :news="latest_news" />
-  <app-footer :links="footer_links" :posts="footer_posts" />
+  <app-footer
+    :movies="footer_movies"
+    :informations="footer_informations"
+    :posts="footer_posts"
+  />
 </template>
 
 <style lang="scss">
