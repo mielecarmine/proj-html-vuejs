@@ -1,7 +1,11 @@
 <script>
+import { store } from "../store/index";
+
 export default {
   data() {
-    return {};
+    return {
+      store,
+    };
   },
   props: {
     film: Object,
@@ -21,7 +25,7 @@ export default {
     <div class="details">
       <span>Details</span>
     </div>
-    <div class="views">Views</div>
+    <div class="views">{{ film.views }} Views</div>
     <div class="rating d-flex gap-2 align-items-center">
       <font-awesome-icon class="special" icon="fa-solid fa-star" />
       <span>{{ film.rating }}/10</span>
