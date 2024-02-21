@@ -128,6 +128,33 @@ export default {
           active: false,
         },
       ],
+      menu_links: [
+        {
+          text: "All",
+          url: "#",
+          active: true,
+        },
+        {
+          text: "Coming Soon",
+          url: "#",
+          active: false,
+        },
+        {
+          text: "Latest Movie",
+          url: "#",
+          active: false,
+        },
+        {
+          text: "Top Rating",
+          url: "#",
+          active: false,
+        },
+        {
+          text: "TV Series",
+          url: "#",
+          active: false,
+        },
+      ],
     };
   },
 
@@ -140,7 +167,7 @@ export default {
     <a href="#"><font-awesome-icon icon="fa-solid fa-chevron-up" /></a>
   </div>
   <app-header :links="header_links" />
-  <app-main />
+  <app-main :links="menu_links" />
 </template>
 
 <style lang="scss">

@@ -1,6 +1,7 @@
 <script>
 import AppCardMovie from "./AppCardMovie.vue";
 import AppCardPreview from "./AppCardPreview.vue";
+
 import { store } from "../store/index";
 
 export default {
@@ -10,6 +11,9 @@ export default {
     };
   },
 
+  props: {
+    links: Array,
+  },
   components: { AppCardMovie, AppCardPreview },
 };
 </script>
@@ -63,6 +67,7 @@ export default {
         >
       </div>
     </div>
+    <!-- MOVIE PREVIEW -->
     <div class="d-flex gap-5 mt-5">
       <div class="preview flex-grow-1">
         <iframe
@@ -85,9 +90,39 @@ export default {
       </div>
     </div>
   </div>
+  <div class="jumbo2 mt-2">
+    <div class="text text-center">
+      <span class="fw-bold special">COMING SOON MOVIE</span>
+      <h1>MAX STILL</h1>
+      <div>
+        <h3>JON PLAYER <span class="special">&</span> EMILY ROSE</h3>
+        <span class="fw-bold fs-5">THE COUNTDOWN IS FINISHED!</span>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="d-flex">
+      <div class="infos">
+        <h3 class="fw-bold">New Movie</h3>
+        <span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, nisi
+          provident!</span
+        >
+      </div>
+    </div>
+    <div class="menu d-flex gap-5 mt-3">
+      <span
+        class="link fw-bold fs-5"
+        v-for="link in links"
+        :class="link.active ? 'active' : ''"
+        >{{ link.text }}</span
+      >
+    </div>
+  </div>
 </template>
 <style lang="scss" scoped>
 @use "../styles/general.scss";
+
 .wrapper {
   background-image: url("../assets/imgs/slider.jpg");
   height: 650px;
@@ -100,6 +135,28 @@ export default {
   }
 }
 
+.jumbo2 {
+  background-image: url("../assets/imgs/coming-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 650px;
+  position: relative;
+  .text {
+    position: absolute;
+    bottom: 40%;
+    left: 45%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      background-color: var(--light-blue);
+      padding: 10px 50px;
+    }
+  }
+}
 .infos {
   display: flex;
   flex-direction: column;
@@ -117,9 +174,9 @@ export default {
   border-radius: 50%;
 }
 
-.width {
-  width: calc(100% / 3);
-}
+// .width-3 {
+//   width: calc(100% / 3);
+// }
 
 .queue {
   height: 500px;
@@ -127,6 +184,19 @@ export default {
   .body {
     background-color: var(--light-blue);
     padding: 20px;
+  }
+}
+
+.menu {
+  .link {
+    &.active {
+      color: var(--green);
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: var(--green);
+    }
   }
 }
 </style>
