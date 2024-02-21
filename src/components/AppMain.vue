@@ -1,12 +1,15 @@
 <script>
-import AppCard from "./AppCard.vue";
+import AppCardMovie from "./AppCardMovie.vue";
+import { store } from "../store/index";
 
 export default {
   data() {
-    return {};
+    return {
+      store,
+    };
   },
 
-  components: { AppCard },
+  components: { AppCardMovie },
 };
 </script>
 <template>
@@ -45,14 +48,8 @@ export default {
       </div>
     </div>
     <div class="row mt-5">
-      <div class="col">
-        <AppCard />
-      </div>
-      <div class="col">
-        <AppCard />
-      </div>
-      <div class="col">
-        <AppCard />
+      <div v-for="film in store.new_movies_slider" class="col">
+        <app-card-movie :film="film" />
       </div>
     </div>
   </div>
