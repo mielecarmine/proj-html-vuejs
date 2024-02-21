@@ -155,6 +155,38 @@ export default {
           active: false,
         },
       ],
+      latest_news: [
+        {
+          title: "Actor The Concept Movie High Concept Theory See The Post",
+          comments: 0,
+          share: true,
+          poster: "blog-150x150.jpg",
+        },
+        {
+          title: "Actor The Concept Movie High Concept Theory See The Post",
+          comments: 0,
+          share: true,
+          poster: "blog2-150x150.jpg",
+        },
+        {
+          title: "Actor The Concept Movie High Concept Theory See The Post",
+          comments: 0,
+          share: true,
+          poster: "blog3-150x150.jpg",
+        },
+        {
+          title: "Actor The Concept Movie High Concept Theory See The Post",
+          comments: 0,
+          share: true,
+          poster: "blog4-150x150.jpg",
+        },
+        {
+          title: "Actor The Concept Movie High Concept Theory See The Post",
+          comments: 0,
+          share: true,
+          poster: "blog5-150x150.jpg",
+        },
+      ],
     };
   },
 
@@ -167,7 +199,7 @@ export default {
     <a href="#"><font-awesome-icon icon="fa-solid fa-chevron-up" /></a>
   </div>
   <app-header :links="header_links" />
-  <app-main :links="menu_links" />
+  <app-main :links="menu_links" :news="latest_news" />
 </template>
 
 <style lang="scss">

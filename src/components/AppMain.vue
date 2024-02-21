@@ -13,6 +13,7 @@ export default {
 
   props: {
     links: Array,
+    news: Array,
   },
   components: { AppCardMovie, AppCardPreview },
 };
@@ -118,6 +119,31 @@ export default {
         >{{ link.text }}</span
       >
     </div>
+    <div class="row g-4 mt-3">
+      <div class="col-4" v-for="film in store.new_movies">
+        <app-card-movie :film="film" />
+      </div>
+    </div>
+    <!-- LATEST NEWS -->
+    <div class="d-flex mt-5">
+      <div class="infos">
+        <h3 class="fw-bold">Latest News</h3>
+        <span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, nisi
+          provident!</span
+        >
+      </div>
+    </div>
+    <!-- SUBSCRIBE -->
+    <div class="subscribe mt-5">
+      <img src="../assets/imgs/form-bg-1.png" alt="" />
+      <div class="form d-flex justify-content-around">
+        <input type="text" placeholder="First Name" />
+        <input type="text" placeholder="Last Name" />
+        <input type="text" placeholder="Email Address" />
+      </div>
+      <button class="button">Subscribe</button>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -197,6 +223,36 @@ export default {
       cursor: pointer;
       color: var(--green);
     }
+  }
+}
+
+.subscribe {
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+  .form {
+    width: 100%;
+    position: absolute;
+    bottom: 50%;
+
+    input {
+      background-color: inherit;
+      padding: 10px 40px;
+      border: 1px solid var(--white);
+      border-radius: 40px;
+      color: #b2c5b2;
+    }
+  }
+
+  .button {
+    position: absolute;
+    left: 45%;
+    right: 50%;
+    bottom: 20%;
+    background-color: var(--light-blue);
+    padding: 10px 60px;
   }
 }
 </style>
