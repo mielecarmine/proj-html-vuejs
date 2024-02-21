@@ -16,6 +16,10 @@ import {
   faStar,
   faLock,
   faBasketShopping,
+  faChevronLeft,
+  faChevronRight,
+  faCaretDown,
+  faChevronUp,
 } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -36,7 +40,11 @@ library.add(
   faInstagram,
   faGooglePlusG,
   faLock,
-  faBasketShopping
+  faBasketShopping,
+  faChevronLeft,
+  faChevronRight,
+  faCaretDown,
+  faChevronUp
 );
 
 const app = createApp(App);

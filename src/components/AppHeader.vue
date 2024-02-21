@@ -5,7 +5,7 @@ export default {
   },
 
   props: {
-    links: Object,
+    links: Array,
   },
 
   created() {
@@ -57,8 +57,17 @@ export default {
 
     <div id="nav">
       <div class="menu">
-        <ul class="list-group list-group-horizontal gap-1">
-          <!-- <li v-for="link in this.links" class="list-item">{{ link }}</li> -->
+        <ul class="list-group list-group-horizontal gap-2">
+          <div class="d-flex links" v-for="link in this.links">
+            <li class="list-item">
+              {{ link.text }}
+            </li>
+            <font-awesome-icon
+              v-if="link.dropdown"
+              class="align-self-center me-2"
+              icon="fa-solid fa-caret-down"
+            />
+          </div>
         </ul>
       </div>
       <div class="basket">
@@ -90,6 +99,12 @@ export default {
   padding: 5px;
   text-decoration: none;
   font-weight: bold;
+}
+.links {
+  &:hover {
+    color: var(--green);
+    cursor: pointer;
+  }
 }
 
 .basket {

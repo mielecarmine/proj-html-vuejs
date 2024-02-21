@@ -5,22 +5,129 @@ import AppMain from "./components/AppMain.vue";
 export default {
   data() {
     return {
-      header_links: {
-        home_links: ["Home", "Home 2", "Home 3", "Home 4", "Home 5", "Home 6"],
-        Celebrity: [
-          "Celebrity",
-          "Celebrity 2",
-          "Celebrity 3",
-          "Celebrity 4",
-          "Celebrity 5",
-          "Celebrity 6",
-        ],
-        Movie: ["Movie", "Movie 2", "Movie 3", "Movie 4", "Movie 5", "Movie 6"],
-        Page: ["Page", "Page 2", "Page 3", "Page 4", "Page 5", "Page 6"],
-        Shop: ["Shop", "Shop 2", "Shop 3", "Shop 4", "Shop 5", "Shop 6"],
-        blog_link: "Blog",
-        contact: "Contact Us",
-      },
+      header_links: [
+        {
+          text: "Home",
+          url: "#",
+          active: true,
+          dropdown: [
+            {
+              text: "Home 1",
+              url: "#",
+              active: false,
+            },
+            {
+              text: "Home 1",
+              url: "#",
+              active: false,
+            },
+            {
+              text: "Home 1",
+              url: "#",
+              active: false,
+            },
+          ],
+        },
+
+        {
+          text: "Celebrity",
+          url: "#",
+          active: false,
+          dropdown: [
+            {
+              text: "Celebrity 1",
+              url: "#",
+              active: false,
+            },
+            {
+              text: "Celebrity 1",
+              url: "#",
+              active: false,
+            },
+            {
+              text: "Celebrity 1",
+              url: "#",
+              active: false,
+            },
+          ],
+        },
+        {
+          text: "Movie",
+          url: "#",
+          active: false,
+          dropdown: [
+            {
+              text: "Movie 1",
+              url: "#",
+              active: false,
+            },
+            {
+              text: "Movie 1",
+              url: "#",
+              active: false,
+            },
+            {
+              text: "Movie 1",
+              url: "#",
+              active: false,
+            },
+          ],
+        },
+        {
+          text: "Page",
+          url: "#",
+          active: false,
+          dropdown: [
+            {
+              text: "Page 1",
+              url: "#",
+              active: false,
+            },
+            {
+              text: "Page 1",
+              url: "#",
+              active: false,
+            },
+            {
+              text: "Page 1",
+              url: "#",
+              active: false,
+            },
+          ],
+        },
+        {
+          text: "Shop",
+          url: "#",
+          active: false,
+          dropdown: [
+            {
+              text: "Shop 1",
+              url: "#",
+              active: false,
+            },
+            {
+              text: "Shop 1",
+              url: "#",
+              active: false,
+            },
+            {
+              text: "Shop 1",
+              url: "#",
+              active: false,
+            },
+          ],
+        },
+        {
+          text: "Blog",
+          url: "#",
+          active: false,
+        },
+        {
+          text: "Contact us",
+          url: "#",
+          active: false,
+        },
+      ],
     };
   },
 
@@ -29,10 +136,27 @@ export default {
 </script>
 
 <template>
+  <div class="arrow-up">
+    <a href="#"><font-awesome-icon icon="fa-solid fa-chevron-up" /></a>
+  </div>
   <app-header :links="header_links" />
   <app-main />
 </template>
 
 <style lang="scss">
 @use "./styles/general.scss";
+
+.arrow-up {
+  background-color: var(--white);
+  width: 40px;
+  height: 40px;
+  padding: 7px;
+  color: black;
+  text-align: center;
+  position: fixed;
+  left: 95%;
+  top: 80%;
+  z-index: 1;
+  cursor: pointer;
+}
 </style>
